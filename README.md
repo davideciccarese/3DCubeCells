@@ -2,7 +2,7 @@
 
 A small, self-contained teaching model that grows a three-dimensional colony of rod-shaped cells (spherocylinders) inside a cube and shows how the canonical pairwise microbial interaction archetypes of Dolinsek, Goldschmidt and Johnson (2016) play out as a spatial range expansion. Two strains, A and B, are seeded as a flat patch of founders on the floor and grow upward and outward while exchanging or competing for diffusible chemicals. The colony is rendered as a rotating cube, and its genealogy and growth are analysed in space and time. It uses only NumPy, SciPy, Matplotlib and Pillow, so there is nothing exotic to install.
 
-![the three interactions as 3D range expansions in a cube](figures/cube3d_multipanel.png)
+![the three interactions as 3D range expansions in a cube](figures/cube3d_multipanel.gif)
 
 ## The three interactions
 
@@ -87,13 +87,13 @@ with translational drag $\zeta_t\propto L_i$ and rotational drag $\zeta_r\propto
 
 **Lineage trees (`cube3d_lineage_tree.gif`, still below).** For each interaction and each species we take five mother cells nearest the centre of the founding patch and draw their progeny as a spatial tree, every division an edge from parent to daughter, colour-coded by generation on a magma scale, growing over time. Central founders are chosen on purpose: a cell in the middle of the patch is hemmed in on all sides, so if it is going to leave descendants at all it must push upward, which is the interesting case.
 
-![spatial lineage trees](figures/cube3d_lineage_tree.png)
+![spatial lineage trees](figures/cube3d_lineage_tree.gif)
 
 Ecologically the trees read as reproductive success in a spatially structured population. The depth a clone reaches is how many division rounds that founder's line completed before being buried or outrun. The contrast between interactions is the message. In the public good, species B (the non-producer) builds the deepest, bushiest trees while the producer A stays shallow: the cost $c_\text{pg}$ that A pays to make $P$ slows it just enough that B, reaping the benefit for free, out-divides it and surfs the front. This is the cheater advantage, the tragedy of the commons playing out in space. In commensalism the asymmetry runs the other way and is starker: A sits on the primary resource and builds tall lineages, while the central B cells barely divide at all, because they depend on A's slowly diffusing by-product and a founder in the crowded centre rarely sees enough of it. In facultative mutualism both species build comparable, moderate trees: reciprocal cross-feeding lets neither exclude the other, the spatial signature of stable coexistence.
 
 **Clones (`cube3d_clones.gif`, still below).** The same five central founders per species, now each clone in its own colour, one cube per species and one row per interaction, so you can watch individual families fill space. Where the lineage figure asks how deep a family goes, this one asks how a family is shaped: compact and columnar when hemmed in, spreading when it reaches a free surface.
 
-![central clones](figures/cube3d_clones.png)
+![central clones](figures/cube3d_clones.gif)
 
 **Growth and spatial organisation (`cube3d_growth.png`).** Three diagnostics per interaction.
 
